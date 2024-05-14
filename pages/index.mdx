@@ -1,11 +1,64 @@
+import { Steps } from 'nextra/components'
+import { Callout } from 'nextra/components'
+
+<Callout type="warning" emoji="⚠️">
+    CRP is WIP.
+</Callout>
+
 # Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+CRP is the **simplest and fastest way** to start and manage your **Robotics Operating System (ROS)** projects.
 
-## What is Nextra?
+## Get Started
+<Steps>
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+    ### Step 1
 
-## Documentation
+    ```bash copy
+    apt install create-ros-project
+    ```
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+    ### Step 2
+
+    ```bash copy
+    create-ros-project
+    ```
+</Steps>
+
+
+## Key Features
+CRP aims to significantly improve the ROS developer experience by solving the ROS dependency management and compatibility problem to reduce the learning curve and project setup time for newcomers and teams.
+
+- **One Command Install:** CRP lets you get started in seconds and to focus on code, not build projects.
+- **Dependency Management:** With 1234 combinations of ROS distros and OS, CRP helps you avoid version mismatches.
+- **Templates:** CRP templates accelerates the process of creating new packages and assist in delivery quality and standard code.
+
+
+## Advantages
+- **Fast:**
+- **Simple:**
+- **Scalable:**
+
+
+## FAQ
+
+export function FAQBox({ title, children }) {
+    return (
+        <details
+            open
+            className="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4"
+        >
+            <summary>
+                <strong className="text-lg">{title}</strong>
+            </summary>
+            <div className="nx-p-2">{children}</div>
+        </details>
+    )
+}
+
+<FAQBox title="Can I use Nextra with Next.js app router?">
+    Yes, it will be. The reason you can't use it yet is because we're taking a "docs-first" approach.
+</FAQBox>
+
+<FAQBox title="Why are there only so few compatbiliity?">
+    CRP is a new project under development. We'll be rolling out with new compatabilities soon!
+</FAQBox>
