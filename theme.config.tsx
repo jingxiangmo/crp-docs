@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Made with ❤️ by JXM and Sasha',
+    text: 'Made with ❤️ by JXM and ',
   },
 }
 
