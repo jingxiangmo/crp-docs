@@ -2,64 +2,91 @@ import { Steps } from 'nextra/components'
 import { Callout } from 'nextra/components'
 
 <Callout type="warning" emoji="⚠️">
-    CRP is WIP.
+    CRP is Work in Progress.
 </Callout>
 
 # Introduction
-Create-ROS-Project (CRP) is the **simplest and fastest way** to create, develop, deploy, and test your **Robotics Operating System (ROS)** projects.
+**Create-ROS-Project (CRP) is the simplest and fastest way to create and manage your Robotics Operating System (ROS) projects.**
 
-[video goes here]
+Installing and setting up ROS projects can be complex and annoying, especially for beginners. **CRP is a standardized project initialization tool that aims to simplify ROS installation, project setup, project structure standardization, dependency management, pre-configure simulations, and deployment.** Using proven practices and technologies for ROS like Docker, rosdep, colcon, and etc. CRP aims to make starting your next robotics project fast and easy.
 
+<br/> <br/>
+
+<img src="https://cln.sh/xtYr5V8D/download" alt="no alt" class="rounded-3xl shadow-xl"/>
 
 ## Get Started
 <Steps>
 
-    ### Step 1
+    ### Step 1: install and build from source
 
     ```bash copy
-    apt install create-ros-project
+    git clone https://github.com/jingxiangmo/create-ros-project && cd create-ros-project && go build .
+    # add to path
+    echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
+    source ~/.bashrc
     ```
 
-    ### Step 2
+    ### Step 2: run the CLI application
+
+    Option A: from the project directory
 
     ```bash copy
+    # navigate to the directory containing the executable
+    ./create-ros-project
+    ```
+
+    Option B: if the executable is in your PATH
+    ```
     create-ros-project
     ```
 </Steps>
 
-## Advantages
-- **Fast:** [one line install and setup for new projects or existing profjects]
-- **Simple:** [remove learning curve, never have to interact with docker etc.]
-- **Scalable:** [could be used in cross platform]
 
-## Key Features
-CRP aims to significantly improve the ROS developer experience by solving the ROS dependency management and compatibility problem to reduce the learning curve and project setup time for newcomers and teams.
-
-- **One Command Install:** CRP lets you get started in seconds and to focus on code, not build projects.
-- **Dependency Management:** With 1234 combinations of ROS distros and OS, CRP helps you avoid version mismatches.
-- **Templates:** CRP templates accelerates the process of creating new packages and assist in delivery quality and standard code.
+## Current Features
+- **One Command Install:** CRP lets you install ROS on your computer without having to check documentations, so you can focus on code, not build projects.
+- **Project Templates:** CRP templates gives you starter templates with Docker, publishers, subscribers, services, and actions setup and get started right away with you new project.
 
 
-## FAQ
+## Roadmap Features
+- Cross-platform compatibility checker for all dependencies of the project
+- ROS distribution versioning updates
+- Customizable project templates
 
-export function FAQBox({ title, children }) {
-    return (
-        <details
-            open
-            className="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4"
-        >
-            <summary>
-                <strong className="text-lg">{title}</strong>
-            </summary>
-            <div className="nx-p-2">{children}</div>
-        </details>
-    )
-}
 
-<FAQBox title="Can I use Nextra with Next.js app router?">
-    Yes, it will be. The reason you can't use it yet is because we're taking a "docs-first" approach.
-</FAQBox>
 
-<FAQBox title="Why are there only so few compatbiliity?">
-    CRP is a new project under development. We'll be rolling out with new compatabilities soon!
-</FAQBox>
+[//]: # ()
+[//]: # (## FAQ)
+
+[//]: # ()
+[//]: # (export function FAQBox&#40;{ title, children }&#41; {)
+
+[//]: # (    return &#40;)
+
+[//]: # (        <details)
+
+[//]: # (            open)
+
+[//]: # (            className="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4")
+
+[//]: # (        >)
+
+[//]: # (            <summary>)
+
+[//]: # (                <strong className="text-lg">{title}</strong>)
+
+[//]: # (            </summary>)
+
+[//]: # (            <div className="nx-p-2">{children}</div>)
+
+[//]: # (        </details>)
+
+[//]: # (    &#41;)
+
+[//]: # (})
+
+[//]: # ()
+[//]: # (<FAQBox title="Can I use Nextra with Next.js app router?">)
+
+[//]: # (    Yes, it will be. The reason you can't use it yet is because we're taking a "docs-first" approach.)
+
+[//]: # (</FAQBox>)
