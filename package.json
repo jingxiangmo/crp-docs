@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "create-ros-projects",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Create ROS projects in seconds.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
