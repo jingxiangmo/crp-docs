@@ -2,6 +2,8 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 
 import Link from "next/link";
 
+import styles from "./theme.module.css";
+
 const config: DocsThemeConfig = {
   logo: <span>Create ROS Project</span>,
   project: {
@@ -15,11 +17,11 @@ const config: DocsThemeConfig = {
     text: (
       <span>
         Made with ❤️ by{" "}
-        <Link className="author-link" href="https://jingxiangmo.com">
+        <Link className={styles.author_link} href="https://jingxiangmo.com">
           JXM
         </Link>{" "}
         and{" "}
-        <Link className="author-link" href="https://beaumccartney.vercel.app">
+        <Link className={styles.author_link} href="https://beaumccartney.vercel.app">
           Beau
         </Link>
       </span>
