@@ -1,18 +1,50 @@
 import { Steps } from 'nextra/components'
 import { Callout } from 'nextra/components'
+import Link from 'next/link'
+
 
 <Callout type="warning" emoji="⚠️">
     CRP is Work in Progress.
 </Callout>
 
-# Introduction
-**Create-ROS-Project (CRP) is the simplest and fastest way to create and manage your Robotics Operating System (ROS) projects.**
+# The best way to start your ROS project
 
-Installing and setting up ROS projects can be complex and annoying, especially for beginners. **CRP is a standardized project initialization tool that aims to simplify ROS installation, project setup, project structure standardization, dependency management, pre-configure simulations, and deployment.** Using proven practices and technologies for ROS like Docker, rosdep, colcon, and etc. CRP aims to make starting your next robotics project fast and easy.
+
+We made `create-ros-project` CLI to streamline the setup of ROS projects without compromising modularity.
+
+After countless projects, we have done our best to standardize the setup of ROS projects into this CLI tool.
+
+This is NOT an all-inclusive template. This is for starting new ROS projects and deploying your ROS project to robots.
 
 <br/> <br/>
 
+
 <img src="https://cln.sh/xtYr5V8D/download" alt="no alt" className="rounded-3xl shadow-xl"/>
+
+
+<br/> <br/>
+
+#### The best of the ROS ecosystem...
+## But ONLY the parts you need
+Take what you need and nothing more!
+
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+  {[
+    { name: "Gazebo", description: "Robotics simulator for testing and development." },
+    { name: "MoveIt", description: "Motion planning and manipulation." },
+    { name: "RVIZ", description: "3D visualization of robot models and sensor data." },
+    { name: "RQT", description: "Graphical user interface development." },
+    { name: "Nav2", description: "Navigation stack for autonomous robots." },
+    { name: "ros_control", description: "Controller management and hardware abstraction." },
+  ].map((tool) => (
+    <div key={tool.name} className="flex flex-col items-center p-4 rounded-lg shadow-md transition-all hover:shadow-lg">
+      <img src={`/${tool.name.toLowerCase()}.png`} alt={`${tool.name} Logo`} className="h-16 mb-4"/>
+      <h3 className="text-lg font-semibold mb-2 text-gray-800">{tool.name}</h3>
+      <p className="text-sm text-gray-600 text-center">{tool.description}</p>
+    </div>
+  ))}
+</div>
+
 
 ## Get Started
 <Steps>
@@ -40,53 +72,3 @@ Installing and setting up ROS projects can be complex and annoying, especially f
     create-ros-project
     ```
 </Steps>
-
-
-## Current Features
-- **One Command Install:** CRP lets you install ROS on your computer without having to check documentations, so you can focus on code, not build projects.
-- **Project Templates:** CRP templates gives you starter templates with Docker, publishers, subscribers, services, and actions setup and get started right away with you new project.
-
-
-## Roadmap Features
-- Cross-platform compatibility checker for all dependencies of the project
-- ROS distribution versioning updates
-- Customizable project templates
-
-
-
-[//]: # ()
-[//]: # (## FAQ)
-
-[//]: # ()
-[//]: # (export function FAQBox&#40;{ title, children }&#41; {)
-
-[//]: # (    return &#40;)
-
-[//]: # (        <details)
-
-[//]: # (            open)
-
-[//]: # (            className="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4")
-
-[//]: # (        >)
-
-[//]: # (            <summary>)
-
-[//]: # (                <strong className="text-lg">{title}</strong>)
-
-[//]: # (            </summary>)
-
-[//]: # (            <div className="nx-p-2">{children}</div>)
-
-[//]: # (        </details>)
-
-[//]: # (    &#41;)
-
-[//]: # (})
-
-[//]: # ()
-[//]: # (<FAQBox title="Can I use Nextra with Next.js app router?">)
-
-[//]: # (    Yes, it will be. The reason you can't use it yet is because we're taking a "docs-first" approach.)
-
-[//]: # (</FAQBox>)
